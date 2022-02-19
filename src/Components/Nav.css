@@ -1,0 +1,17 @@
+.NavEls{
+    display: flex;
+    justify-content: space-between;
+}
+
+.NavHorLine{
+    outline: 1px solid rgba(255, 255, 255, 0.44);
+    width: 100%;
+}
+
+.Nav{
+    width: 650px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
