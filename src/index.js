@@ -4,9 +4,15 @@ import './index.css';
 import App from './App';
 import {store} from "./store";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App store={store}/>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+let render = () => {
+    ReactDOM.render(
+        <React.StrictMode>
+            <App store={store}/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+
+render()
+
+export let observer = () => {render()}

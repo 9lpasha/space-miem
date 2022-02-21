@@ -5,7 +5,7 @@
     font-size: 18px;
     line-height: 22px;
     /* identical to box height */
-
+    cursor: pointer;
     letter-spacing: 0.05em;
     color: white;
 }

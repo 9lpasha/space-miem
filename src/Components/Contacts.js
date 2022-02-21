@@ -4,17 +4,17 @@ import Input from "./Input";
 function Contacts({store}) {
 
     let inputsInfo = [{
-        width: 450,
-        height: 40,
+        width: 400,
+        height: 32,
         name: 'Ваше ФИО:'
     },{
-        width: 450,
-        height: 40,
-        name: 'Ваш E-Mail'
+        width: 400,
+        height: 32,
+        name: 'Ваш E-Mail:'
     },{
-        width: 450,
-        height: 250,
-        name: 'Ваше сообщение'
+        width: 400,
+        height: 200,
+        name: 'Ваше сообщение:'
     }]
 
     let inputs = inputsInfo.map((el, i) => <Input height={el.height} width={el.width} key={i} name={el.name}></Input>)

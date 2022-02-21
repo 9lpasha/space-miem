@@ -65,5 +65,9 @@
 
 .ContactsTextAndForm{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.ContactsText{
+    margin-right: 310px;
 }
