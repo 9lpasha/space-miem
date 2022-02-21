@@ -7,9 +7,9 @@ function Nav({store, currentMenu, updateCurrentMenu}) {
     let NavLineCurrent = useRef(null)
 
     let [NavLine, setNavLine] = useState({
-        width: '1px',
-        top: '1px',
-        left: '1px'
+        width: '',
+        top: '',
+        left: ''
     })
 
     let navEls = store.map((el, i) => <NavElement updateCurrentMenu={updateCurrentMenu} refLine={NavLineCurrent} iter={i} key={i} name={store[i]}></NavElement>)
@@ -22,11 +22,10 @@ function Nav({store, currentMenu, updateCurrentMenu}) {
         })
     })
 
-    window.addEventListener('resize', () => document.querySelector('.LineUnderOnePoint').style.left = NavElementCurrent.current.children[currentMenu].offsetLeft + 'px')
-
     useEffect(() => {
         updateNavLine(currentMenu)
         console.log(NavLine)
+        window.addEventListener('resize', () => document.querySelector('.LineUnderOnePoint').style.left = NavElementCurrent.current.children[currentMenu].offsetLeft + 'px')
     }, [NavElementCurrent, currentMenu])
 
 

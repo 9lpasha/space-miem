@@ -1,8 +1,8 @@
 import './Input.css';
 
-function Input({width, height,name}) {
+function Input({classN,name}) {
     return (
-        <input style={{width: width, height: height}} placeholder={`${name}`} className="Input" type="text"/>
+        <textarea placeholder={`${name}`} className={`Input ${classN}`} type="text"/>
     );
 }
 

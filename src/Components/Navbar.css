@@ -5,3 +5,34 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.burger{
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 1268px) {
+    .burger{
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .Navbar{
+        padding: 0 50px;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .Navbar{
+        padding: 0 25px;
+        height: 60px;
+    }
+    .burger{
+        margin: 0;
+        width: 30px;
+        height: 30px;
+    }
+}

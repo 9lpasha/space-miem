@@ -1,5 +1,6 @@
 .Logo{
     display: flex;
+    align-items: center;
 }
 
 .LogoText{
@@ -16,4 +17,16 @@ img{
     width: 60px;
     height: 60px;
     margin-right: 40px;
+}
+
+@media (max-width: 575px) {
+    .Logo img{
+        margin: 0 20px;
+        width: 30px;
+        height: 30px;
+    }
+    .LogoText{
+        font-size: 14px;
+        line-height: 17px;
+    }
 }

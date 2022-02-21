@@ -1,5 +1,5 @@
 import './Logo.css';
-import logoImg from '../images/HSE.svg'
+import logoImg from '../images/HSE2.png'
 
 function Logo() {
     return (

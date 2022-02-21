@@ -14,10 +14,27 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .LineUnderOnePoint{
     outline: 1px solid #0086FF;
     position: absolute;
     transition-duration: 0.25s;
+}
+
+@media (max-width: 1268px) {
+    .Nav{
+        display: none;
+    }
+    .Navbar{
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 1350px) {
+    .Nav{
+        width: 550px;
+    }
+
 }

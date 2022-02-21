@@ -1,23 +1,26 @@
 import './Contacts.css';
 import Input from "./Input";
+import Button from "./Button";
 
-function Contacts({store}) {
-
+function Contacts() {
     let inputsInfo = [{
         width: 400,
-        height: 32,
-        name: 'Ваше ФИО:'
+        height: 27,
+        name: 'Ваше ФИО:',
+        class: 'smallInp'
     },{
         width: 400,
-        height: 32,
-        name: 'Ваш E-Mail:'
+        height: 27,
+        name: 'Ваш E-Mail:',
+        class: 'smallInp'
     },{
         width: 400,
-        height: 200,
-        name: 'Ваше сообщение:'
+        height: 160,
+        name: 'Ваше сообщение:',
+        class: 'bigInp'
     }]
 
-    let inputs = inputsInfo.map((el, i) => <Input height={el.height} width={el.width} key={i} name={el.name}></Input>)
+    let inputs = inputsInfo.map((el, i) => <Input classN={el.class} key={i} name={el.name}></Input>)
 
     return (
         <div className="Contacts">
@@ -26,16 +29,19 @@ function Contacts({store}) {
             <div className="ContactsTextAndForm">
                 <div className="ContactsText">
                     <p className="ContactsText3">Наши контакты:</p>
-                    <p className="ContactsText4">Адрес:  <br/>
-                        123458, Москва, ул. Таллинская, д.34 <br/><br/>
-                        Почта: <br/>
-                        dabrameshin@hse.ru <br/><br/>
-                        Контактный телефон: <br/>
-                        +7(495)772-95-90 *15130</p>
+                    <p className="ContactsText4">Адрес:<br/>123458, Москва, ул. Таллинская, д.34<br/>
+                        <p className='nth'>
+                            Почта:<br/>dabrameshin@hse.ru
+                        </p>
+                        <p style={{display: 'inline-block'}}>
+                            Контактный телефон:<br/>+7(495)772-95-90 *15130
+                        </p>
+                    </p>
                 </div>
                 <div className="ContactsForm">
                     <p className="ContactsFormText">Связаться с нами:</p>
                     {inputs}
+                    <Button name="ОТПРАВИТЬ"></Button>
                 </div>
             </div>
         </div>
